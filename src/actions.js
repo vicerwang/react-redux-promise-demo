@@ -1,16 +1,13 @@
 import fetch from 'isomorphic-fetch';
 import { createAction } from 'redux-actions';
 
-export const SET_SUBREDDIT = 'SET_SUBREDDIT';
 export const REQUEST_POSTS = 'REQUEST_POSTS';
-export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const FETCH_POSTS = 'FETCH_POSTS';
 
-export const setSubreddit = createAction(SET_SUBREDDIT, subreddit => ({ subreddit }));
 export const requestPosts = createAction(REQUEST_POSTS);
 
 // es7 async/await
-export const fetchPosts = createAction(RECEIVE_POSTS, async subreddit => {
+export const fetchPosts = createAction(FETCH_POSTS, async subreddit => {
   const response = await fetch(`http://www.subreddit.com/r/${subreddit}.json`);
     if (response.ok) {
       const json = await response.json();
@@ -20,7 +17,7 @@ export const fetchPosts = createAction(RECEIVE_POSTS, async subreddit => {
 });
 
 // es6 promise
-// export const fetchPosts = createAction(RECEIVE_POSTS, subreddit =>
+// export const fetchPosts = createAction(FETCH_POSTS, subreddit =>
 //   fetch(`http://www.subreddit.com/r/${subreddit}.json`)
 //     .then(response => {
 //       if (response.ok) {
