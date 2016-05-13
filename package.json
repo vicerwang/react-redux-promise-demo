@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.8.0",
+    "flux-standard-action": "^0.6.1",
     "isomorphic-fetch": "^2.2.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
@@ -43,6 +44,7 @@
     "redux": "^3.5.2",
     "redux-actions": "^0.9.1",
     "redux-logger": "^2.6.1",
-    "redux-promise": "^0.5.3"
+    "redux-promise": "^0.5.3",
+    "redux-sequence-action": "^0.2.0"
   }
 }
