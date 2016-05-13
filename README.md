@@ -1,4 +1,4 @@
-# react-redux-todomvc
+# react-redux-promise-demo
 A [redux-promise](https://github.com/acdlite/redux-promise) and [react-actions](https://github.com/acdlite/redux-actions) demo written by [react](http://facebook.github.io/react/).
 
 ```
